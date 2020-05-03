@@ -10,9 +10,10 @@ class KittensController < ApplicationController
     end
 
     def show
+      @kitten = Kitten.find(params[:id])
       respond_to do |format|
          format.html
-         format.json
+         format.json {redner json: @kitten}
        end
     end
 
