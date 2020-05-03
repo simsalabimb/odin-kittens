@@ -1,0 +1,12 @@
+ <h1> INDEX OF KITTENS </h1>
+ 
+  <% @kittens.each do |kitten| %>
+     <li>
+       <%= link_to kitten.name, kitten_path(kitten) %><br>
+
+     </li>
+        
+    
+  <% end %>
+
+  <%= link_to 'New Kitten', new_kitten_path %>
